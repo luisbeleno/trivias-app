@@ -1,0 +1,15 @@
+
+<div class="contenedor">
+  <div class="alert alert-danger" role="alert" *ngIf="error">
+    <strong>Por favor ingresa PIN</strong>
+  </div>
+  <input [(ngModel)]="pin" type="text" class="form-control input-ingresar mb-2" placeholder="PIN del juego">
+  <button (click)='ingresar()' class="btn-principal btn-ingresar">Ingresar</button>
+
+</div>
+<div class="fixed-bottom">
+  <p class="text-center text-footer">
+    Crea tu propia trivia Gratis
+    <a class="link-footer" routerLink='/usuario'>aqui</a>
+  </p>
+</div>

@@ -1,0 +1,31 @@
+<div class="container mt-5">
+  <div *ngIf="loading" class="d-flex justify-content-center">
+    <app-spinner></app-spinner>
+  </div>
+  <div class="row" *ngIf="!loading">
+    <div class="col-lg-6 offset-lg-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-center titulo">Recuperar Contraseña</h5>
+          <form [formGroup]='recoveryForm' (ngSubmit)="recoveryPassowrd()">
+            <div class="mb-3">
+              <input formControlName='usuario' type="text" class="form-control form-control-lg" placeholder="Ingrese su correo">
+              <div class="text-danger"
+               *ngIf="recoveryForm.get('usuario')?.hasError('required') && recoveryForm.get('usuario')?.touched">
+                El correo es <strong>Requerido</strong>
+              </div>
+              <div class="text-danger"
+              *ngIf="recoveryForm.get('usuario')?.hasError('email') && recoveryForm.get('usuario')?.touched">
+                El correo es <strong>Invalido</strong>
+              </div>
+            </div>
+            <button type="button" class="btn btn-secondary btn-lg" routerLink="/usuario">Volver</button>
+            <button type="submit"
+            class="btn btn-primary btn-lg float-end"
+            [disabled]="recoveryForm.invalid">Aceptar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

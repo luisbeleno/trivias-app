@@ -28,6 +28,9 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/animate.css/animate.min.css",
+              "node_modules/ngx-toastr/toastr.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -120,9 +123,16 @@
               "devServerTarget": "trivias-app:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }
   },
-  "defaultProject": "trivias-app"
+  "defaultProject": "trivias-app",
+  "cli": {
+    "analytics": "1c64e6a2-21aa-4e3c-b708-b497ce20ba49"
+  }
 }

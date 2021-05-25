@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "trivia-bible-app": {
+      "hosting": {
+        "trivias-app": [
+          "trivia-bible-app"
+        ]
+      }
+    }
+  }
+}

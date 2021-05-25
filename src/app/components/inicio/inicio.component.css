@@ -1,0 +1,30 @@
+.input-ingresar{
+  width:195px;
+  text-align: center;
+  height: 3.15rem;
+  font-size: 1.25rem;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.btn-ingresar{
+  width: 195px;
+
+}
+
+.contenedor{
+  display: flex;
+  flex-direction: column ;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.link-footer{
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+.text-footer{
+  color: white;
+}
